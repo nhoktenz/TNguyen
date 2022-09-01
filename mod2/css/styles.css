@@ -5,16 +5,19 @@
   margin: 0;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
+body{
+  background-color: antiquewhite;
+}
 .container {
-  height: 100vh;  
   margin: 10px;
   position: relative;
+  border:none;
 }
 
 .title {
   margin-top:30px;
   margin-bottom: 30px;
-  font-size: 1.75em;
+  font-size: 175%;
   text-align: center;
 }
 
@@ -22,25 +25,25 @@
   width: 100%;
 }
 
-section {
-  box-sizing: border-box;
+section{
+  padding:10px;
 }
 
-.box {
+.item {
   height: 140px;
-  margin: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
   background-color: #aea7a7;
   overflow: hidden;
 } 
 
-.box:hover {
+.item:hover {
   overflow-y: scroll;
   cursor:row-resize;
 }
 .content {
   padding: 10px;
   content: "Menu";
+ 
   clear: right;
 }
 section {
@@ -48,15 +51,16 @@ section {
 }
 
 .section-title {
-  border: 1px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
   padding: 2px;
   width: 150px;
-  margin-top: 0;
   text-align: center;
   position: relative;
-  font-size: 1.25em;
+  top:0;
+  right:0;
+  font-size: 125%;
   overflow: auto;
-  position: relative;
   float: right;
 }
 
@@ -239,16 +243,18 @@ section {
     position: relative;
   }
   .title::after {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 0.9em;
+    font-family: "Brushstroke", fantasy;
+    font-size: 85%;
     visibility: visible;
     position: absolute;
     left: 5px;
     content: "Our Categories";
-    margin-top:15px;
-    margin-bottom: 15px;
+    margin-top:5px;
+    padding-bottom: 20px;
+    margin-left: 10px;
   }
   .section-title {
     width: 100%;
+    border-left: 0px;
   }
 }
