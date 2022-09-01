@@ -257,4 +257,9 @@ section {
     width: 100%;
     border-left: 0px;
   }
+
+  .section-title::after{
+    content: "- Choose: Teriyaki/ StirFry.";
+    overflow-wrap: break-word;
+  }
 }
