@@ -12,17 +12,20 @@ body{
   margin: 10px;
   position: relative;
   border:none;
+  height:auto;
 }
 
 .title {
   margin-top:30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-size: 175%;
   text-align: center;
 }
 
 .row {
   width: 100%;
+  padding-top:20px;
+  padding-bottom: 20px;;
 }
 
 .items{
@@ -236,9 +239,13 @@ body{
   .col-sm-12 {
     width: 100%;
   }
+
   .title {
     visibility: hidden;
     position: relative;
+    margin-bottom:5px;
+    padding-bottom:10px;
+    overflow-wrap: break-word;
   }
   .title::after {
     font-family: "Brushstroke", fantasy;
@@ -248,7 +255,6 @@ body{
     left: 5px;
     content: "Our Categories";
     margin-top:5px;
-    padding-bottom: 20px;
     margin-left: 10px;
     text-align: left;
   }
