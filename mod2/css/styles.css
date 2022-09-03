@@ -5,18 +5,18 @@
   margin: 0;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
-body{
+body {
   background-color: rgb(195, 230, 164);
 }
 .container {
   margin: 10px;
   position: relative;
-  border:none;
-  height:auto;
+  border: none;
+  height: auto;
 }
 
 .title {
-  margin-top:30px;
+  margin-top: 30px;
   margin-bottom: 15px;
   font-size: 175%;
   text-align: center;
@@ -24,12 +24,12 @@ body{
 
 .row {
   width: 100%;
-  padding-top:20px;
-  padding-bottom: 20px;;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.items{
-  padding:10px;
+.items {
+  padding: 10px;
   position: relative;
 }
 
@@ -38,18 +38,17 @@ body{
   border: 2px solid black;
   background-color: #aea7a7;
   overflow: hidden;
-} 
+}
 
 .item:hover {
   overflow-y: scroll;
-  cursor:row-resize;
+  cursor: row-resize;
 }
 .content {
   padding: 10px;
   content: "Menu";
   clear: right;
 }
-
 
 .section-title {
   border-left: 2px solid black;
@@ -58,8 +57,8 @@ body{
   width: 150px;
   text-align: center;
   position: relative;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   font-size: 125%;
   overflow: auto;
   float: right;
@@ -131,7 +130,6 @@ body{
     width: 100%;
   }
 }
-
 
 /********** Medium devices / tablets only **********/
 @media (min-width: 768px) and (max-width: 991px) {
@@ -243,8 +241,8 @@ body{
   .title {
     visibility: hidden;
     position: relative;
-    margin-bottom:5px;
-    padding-bottom:10px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
     overflow-wrap: break-word;
   }
   .title::after {
@@ -254,7 +252,7 @@ body{
     position: absolute;
     left: 5px;
     content: "Our Categories";
-    margin-top:5px;
+    margin-top: 5px;
     margin-left: 10px;
     text-align: left;
   }
@@ -263,8 +261,16 @@ body{
     border-left: 0px;
   }
 
-  .section-title::after{
-    content: "- Choose: Teriyaki/ StirFry.";
+  #chicken.section-title::after {
+    content: "- This is chicken teriyaki with veggies and white rice";
+    overflow-wrap: break-word;
+  }
+  #beef.section-title::after {
+    content: "- This is black bean noodle beef with pepper + white rice";
+    overflow-wrap: break-word;
+  }
+  #sushi.section-title::after {
+    content: "- Dragon roll or phoenix roll with miso soup";
     overflow-wrap: break-word;
   }
 }
