@@ -3,3 +3,33 @@ body {
   color: #fff;
   background-color: #61122f;
 }
+
+/** HEADER **/
+#header-nav {
+  background-color: #bdeec4;
+  border-radius: 0;
+  border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.navbar-brand h1 {
+  font-family: "Pacifico", cursive;
+  color: #61122f;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.navbar-brand a {
+  text-decoration: none;
+}
+.navbar-brand a > h1:hover,
+.navbar-brand a > h1:focus {
+  text-decoration: none;
+  color: green;
+}
