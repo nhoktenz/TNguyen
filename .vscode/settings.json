@@ -1,5 +1,7 @@
 {
   "editor.formatOnSave": true,
   "liveServer.settings.port": 5501,
-  "editor.formatOnType": true
+  "editor.formatOnType": true,
+  "typescript.format.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

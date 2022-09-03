@@ -28,8 +28,8 @@ body {
 .navbar-brand a {
   text-decoration: none;
 }
-.navbar-brand a > h1:hover,
-.navbar-brand a > h1:focus {
+.navbar-brand > h1:hover,
+.navbar-brand > h1:focus {
   text-decoration: none;
   color: green;
 }
