@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   color: #fff;
@@ -6,9 +16,8 @@ body {
 
 /** HEADER **/
 #header-nav {
-  background-color: #bdeec4;
+  background-color: #59bb68;
   border-radius: 0;
-  border-bottom: 2px solid black;
 }
 
 .navbar-brand {
@@ -38,6 +47,18 @@ body {
   clear: both;
 }
 
+.seperate-line {
+  color: black;
+}
+
+.nav-item:hover {
+  background-color: #61122f;
+}
+a.nav-link:hover {
+  color: white;
+}
+/***** HOME ****/
+
 #chicken {
   background-color: rgb(115, 194, 218);
 }
@@ -50,18 +71,18 @@ body {
   background-color: chocolate;
 }
 
-/** large devices - Desktop **/
+/** xlarge devices - Desktop **/
 @media (min-width: 1200px) {
 }
 
-/** medium devices - Tablet **/
+/** large devices - Tablet **/
 @media (min-width: 992px) and (max-width: 1199px) {
 }
 
-/** Small device - Mobile **/
-@media (max-width: 991px) {
+/** medium device - Mobile **/
+@media (min-width: 768px) and (max-width: 991px) {
 }
 
-/********** Extra small devices only **********/
+/********** small devices only **********/
 @media (max-width: 767px) {
 }
