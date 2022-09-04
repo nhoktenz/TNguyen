@@ -59,7 +59,9 @@ a.nav-link:hover {
   color: white;
 }
 /***** HOME ****/
-
+section > div > p {
+  text-align: right;
+}
 #chicken {
   background-color: rgb(115, 194, 218);
 }
