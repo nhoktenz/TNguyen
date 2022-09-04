@@ -33,3 +33,35 @@ body {
   text-decoration: none;
   color: green;
 }
+
+#header-nav button.navbar-toggler {
+  clear: both;
+}
+
+#chicken {
+  background-color: rgb(115, 194, 218);
+}
+
+#beef {
+  background-color: rgb(221, 13, 228);
+}
+
+#sushi {
+  background-color: chocolate;
+}
+
+/** large devices - Desktop **/
+@media (min-width: 1200px) {
+}
+
+/** medium devices - Tablet **/
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/** Small device - Mobile **/
+@media (max-width: 991px) {
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+}

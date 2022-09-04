@@ -22,12 +22,12 @@
     />
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-light">
+    <header class="sticky-top">
+      <nav id="header-nav" class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html"> <h1>Food, LLC</h1></a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler d-block d-sm-none d-md-none"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -37,16 +37,22 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="collapse navbar-collapse text-center"
+            id="navbarSupportedContent"
+          >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item d-block d-sm-none">
-                <a class="nav-link" aria-current="page" href="#">Chicken</a>
+              <li class="nav-item d-block d-sm-none d-md-none">
+                <a class="nav-link" aria-current="page" href="#chicken"
+                  >Chicken</a
+                >
               </li>
-              <li class="nav-item d-block d-sm-none">
-                <a class="nav-link" aria-current="page" href="#">Beef</a>
+              <li class="nav-item d-block d-sm-none d-md-none">
+                <a class="nav-link" aria-current="page" href="#beef">Beef</a>
               </li>
-              <li class="nav-item d-block d-sm-none">
-                <a class="nav-link" aria-current="page" href="#">Sushi</a>
+              <li><hr class="dropdown-divider" /></li>
+              <li class="nav-item d-block d-sm-none d-md-none">
+                <a class="nav-link" aria-current="page" href="#sushi">Sushi</a>
               </li>
             </ul>
           </div>
@@ -54,72 +60,183 @@
       </nav>
     </header>
     <main>
-      <div class="container">
-        <section>
-          <h2>Chicken</h2>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas
-            sed sed risus pretium quam vulputate dignissim. In dictum non
-            consectetur a erat. Pellentesque elit ullamcorper dignissim cras
-            tincidunt lobortis. Consectetur adipiscing elit duis tristique
-            sollicitudin nibh. Eget lorem dolor sed viverra ipsum nunc aliquet.
-            Turpis egestas maecenas pharetra convallis posuere. Scelerisque
-            viverra mauris in aliquam sem fringilla ut. Id donec ultrices
-            tincidunt arcu non sodales. Auctor neque vitae tempus quam
-            pellentesque nec nam aliquam sem. Lacinia quis vel eros donec ac
-            odio tempor orci. Ultricies tristique nulla aliquet enim tortor. In
-            fermentum posuere urna nec tincidunt praesent. Et magnis dis
-            parturient montes. Bibendum arcu vitae elementum curabitur vitae.
-            Rhoncus dolor purus non enim praesent elementum facilisis. Tortor
-            consequat id porta nibh venenatis cras sed felis. Bibendum arcu
-            vitae elementum curabitur vitae nunc.
+      <div class="container-fluid">
+        <h1 class="text-center">Our Menu</h1>
+        <div class="row ml-4 mr-4">
+          <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
+            <section id="chicken" class="content">
+              <h2 class="text-center">Chicken</h2>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Egestas sed sed risus pretium quam vulputate dignissim. In
+                dictum non consectetur a erat. Pellentesque elit ullamcorper
+                dignissim cras tincidunt lobortis. Consectetur adipiscing elit
+                duis tristique sollicitudin nibh. Eget lorem dolor sed viverra
+                ipsum nunc aliquet. Turpis egestas maecenas pharetra convallis
+                posuere. Scelerisque viverra mauris in aliquam sem fringilla ut.
+                Id donec ultrices tincidunt arcu non sodales. Auctor neque vitae
+                tempus quam pellentesque nec nam aliquam sem. Lacinia quis vel
+                eros donec ac odio tempor orci. Ultricies tristique nulla
+                aliquet enim tortor. In fermentum posuere urna nec tincidunt
+                praesent. Et magnis dis parturient montes. Bibendum arcu vitae
+                elementum curabitur vitae. Rhoncus dolor purus non enim praesent
+                elementum facilisis. Tortor consequat id porta nibh venenatis
+                cras sed felis. Bibendum arcu vitae elementum curabitur vitae
+                nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Egestas sed sed risus pretium quam vulputate dignissim.
+                In dictum non consectetur a erat. Pellentesque elit ullamcorper
+                dignissim cras tincidunt lobortis. Consectetur adipiscing elit
+                duis tristique sollicitudin nibh. Eget lorem dolor sed viverra
+                ipsum nunc aliquet. Turpis egestas maecenas pharetra convallis
+                posuere. Scelerisque viverra mauris in aliquam sem fringilla ut.
+                Id donec ultrices tincidunt arcu non sodales. Auctor neque vitae
+                tempus quam pellentesque nec nam aliquam sem. Lacinia quis vel
+                eros donec ac odio tempor orci. Ultricies tristique nulla
+                aliquet enim tortor. In fermentum posuere urna nec tincidunt
+                praesent. Et magnis dis parturient montes. Bibendum arcu vitae
+                elementum curabitur vitae. Rhoncus dolor purus non enim praesent
+                elementum facilisis. Tortor consequat id porta nibh venenatis
+                cras sed felis. Bibendum arcu vitae elementum curabitur vitae
+                nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Egestas sed sed risus pretium quam vulputate dignissim.
+                In dictum non consectetur a erat. Pellentesque elit ullamcorper
+                dignissim cras tincidunt lobortis. Consectetur adipiscing elit
+                duis tristique sollicitudin nibh. Eget lorem dolor sed viverra
+                ipsum nunc aliquet. Turpis egestas maecenas pharetra convallis
+                posuere. Scelerisque viverra mauris in aliquam sem fringilla ut.
+                Id donec ultrices tincidunt arcu non sodales. Auctor neque vitae
+                tempus quam pellentesque nec nam aliquam sem. Lacinia quis vel
+                eros donec ac odio tempor orci. Ultricies tristique nulla
+                aliquet enim tortor. In fermentum posuere urna nec tincidunt
+                praesent. Et magnis dis parturient montes. Bibendum arcu vitae
+                elementum curabitur vitae. Rhoncus dolor purus non enim praesent
+                elementum facilisis. Tortor consequat id porta nibh venenatis
+                cras sed felis. Bibendum arcu vitae elementum curabitur vitae
+                nunc.
+                <p>
+                  (End of Chicken Section) <a href="#chicken">Back To Top</a>
+                </p>
+              </div>
+            </section>
           </div>
-        </section>
-
-        <section>
-          <h2>Beef</h2>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas
-            sed sed risus pretium quam vulputate dignissim. In dictum non
-            consectetur a erat. Pellentesque elit ullamcorper dignissim cras
-            tincidunt lobortis. Consectetur adipiscing elit duis tristique
-            sollicitudin nibh. Eget lorem dolor sed viverra ipsum nunc aliquet.
-            Turpis egestas maecenas pharetra convallis posuere. Scelerisque
-            viverra mauris in aliquam sem fringilla ut. Id donec ultrices
-            tincidunt arcu non sodales. Auctor neque vitae tempus quam
-            pellentesque nec nam aliquam sem. Lacinia quis vel eros donec ac
-            odio tempor orci. Ultricies tristique nulla aliquet enim tortor. In
-            fermentum posuere urna nec tincidunt praesent. Et magnis dis
-            parturient montes. Bibendum arcu vitae elementum curabitur vitae.
-            Rhoncus dolor purus non enim praesent elementum facilisis. Tortor
-            consequat id porta nibh venenatis cras sed felis. Bibendum arcu
-            vitae elementum curabitur vitae nunc.
+          <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
+            <section id="beef" class="content">
+              <h2 class="text-center">Beef</h2>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Egestas sed sed risus pretium quam vulputate dignissim. In
+                dictum non consectetur a erat. Pellentesque elit ullamcorper
+                dignissim cras tincidunt lobortis. Consectetur adipiscing elit
+                duis tristique sollicitudin nibh. Eget lorem dolor sed viverra
+                ipsum nunc aliquet. Turpis egestas maecenas pharetra convallis
+                posuere. Scelerisque viverra mauris in aliquam sem fringilla ut.
+                Id donec ultrices tincidunt arcu non sodales. Auctor neque vitae
+                tempus quam pellentesque nec nam aliquam sem. Lacinia quis vel
+                eros donec ac odio tempor orci. Ultricies tristique nulla
+                aliquet enim tortor. In fermentum posuere urna nec tincidunt
+                praesent. Et magnis dis parturient montes. Bibendum arcu vitae
+                elementum curabitur vitae. Rhoncus dolor purus non enim praesent
+                elementum facilisis. Tortor consequat id porta nibh venenatis
+                cras sed felis. Bibendum arcu vitae elementum curabitur vitae
+                nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Egestas sed sed risus pretium quam vulputate dignissim.
+                In dictum non consectetur a erat. Pellentesque elit ullamcorper
+                dignissim cras tincidunt lobortis. Consectetur adipiscing elit
+                duis tristique sollicitudin nibh. Eget lorem dolor sed viverra
+                ipsum nunc aliquet. Turpis egestas maecenas pharetra convallis
+                posuere. Scelerisque viverra mauris in aliquam sem fringilla ut.
+                Id donec ultrices tincidunt arcu non sodales. Auctor neque vitae
+                tempus quam pellentesque nec nam aliquam sem. Lacinia quis vel
+                eros donec ac odio tempor orci. Ultricies tristique nulla
+                aliquet enim tortor. In fermentum posuere urna nec tincidunt
+                praesent. Et magnis dis parturient montes. Bibendum arcu vitae
+                elementum curabitur vitae. Rhoncus dolor purus non enim praesent
+                elementum facilisis. Tortor consequat id porta nibh venenatis
+                cras sed felis. Bibendum arcu vitae elementum curabitur vitae
+                nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Egestas sed sed risus pretium quam vulputate dignissim.
+                In dictum non consectetur a erat. Pellentesque elit ullamcorper
+                dignissim cras tincidunt lobortis. Consectetur adipiscing elit
+                duis tristique sollicitudin nibh. Eget lorem dolor sed viverra
+                ipsum nunc aliquet. Turpis egestas maecenas pharetra convallis
+                posuere. Scelerisque viverra mauris in aliquam sem fringilla ut.
+                Id donec ultrices tincidunt arcu non sodales. Auctor neque vitae
+                tempus quam pellentesque nec nam aliquam sem. Lacinia quis vel
+                eros donec ac odio tempor orci. Ultricies tristique nulla
+                aliquet enim tortor. In fermentum posuere urna nec tincidunt
+                praesent. Et magnis dis parturient montes. Bibendum arcu vitae
+                elementum curabitur vitae. Rhoncus dolor purus non enim praesent
+                elementum facilisis. Tortor consequat id porta nibh venenatis
+                cras sed felis. Bibendum arcu vitae elementum curabitur vitae
+                nunc.
+                <p>(End of Beef Section) <a href="#beef">Back To Top</a></p>
+              </div>
+            </section>
           </div>
-        </section>
-
-        <section>
-          <h2>Sushi</h2>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas
-            sed sed risus pretium quam vulputate dignissim. In dictum non
-            consectetur a erat. Pellentesque elit ullamcorper dignissim cras
-            tincidunt lobortis. Consectetur adipiscing elit duis tristique
-            sollicitudin nibh. Eget lorem dolor sed viverra ipsum nunc aliquet.
-            Turpis egestas maecenas pharetra convallis posuere. Scelerisque
-            viverra mauris in aliquam sem fringilla ut. Id donec ultrices
-            tincidunt arcu non sodales. Auctor neque vitae tempus quam
-            pellentesque nec nam aliquam sem. Lacinia quis vel eros donec ac
-            odio tempor orci. Ultricies tristique nulla aliquet enim tortor. In
-            fermentum posuere urna nec tincidunt praesent. Et magnis dis
-            parturient montes. Bibendum arcu vitae elementum curabitur vitae.
-            Rhoncus dolor purus non enim praesent elementum facilisis. Tortor
-            consequat id porta nibh venenatis cras sed felis. Bibendum arcu
-            vitae elementum curabitur vitae nunc.
+          <div class="col-md-4 col-sm-12 col-xs-12 mb-4">
+            <section id="sushi" class="content">
+              <h2 class="text-center">Sushi</h2>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Egestas sed sed risus pretium quam vulputate dignissim. In
+                dictum non consectetur a erat. Pellentesque elit ullamcorper
+                dignissim cras tincidunt lobortis. Consectetur adipiscing elit
+                duis tristique sollicitudin nibh. Eget lorem dolor sed viverra
+                ipsum nunc aliquet. Turpis egestas maecenas pharetra convallis
+                posuere. Scelerisque viverra mauris in aliquam sem fringilla ut.
+                Id donec ultrices tincidunt arcu non sodales. Auctor neque vitae
+                tempus quam pellentesque nec nam aliquam sem. Lacinia quis vel
+                eros donec ac odio tempor orci. Ultricies tristique nulla
+                aliquet enim tortor. In fermentum posuere urna nec tincidunt
+                praesent. Et magnis dis parturient montes. Bibendum arcu vitae
+                elementum curabitur vitae. Rhoncus dolor purus non enim praesent
+                elementum facilisis. Tortor consequat id porta nibh venenatis
+                cras sed felis. Bibendum arcu vitae elementum curabitur vitae
+                nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Egestas sed sed risus pretium quam vulputate dignissim.
+                In dictum non consectetur a erat. Pellentesque elit ullamcorper
+                dignissim cras tincidunt lobortis. Consectetur adipiscing elit
+                duis tristique sollicitudin nibh. Eget lorem dolor sed viverra
+                ipsum nunc aliquet. Turpis egestas maecenas pharetra convallis
+                posuere. Scelerisque viverra mauris in aliquam sem fringilla ut.
+                Id donec ultrices tincidunt arcu non sodales. Auctor neque vitae
+                tempus quam pellentesque nec nam aliquam sem. Lacinia quis vel
+                eros donec ac odio tempor orci. Ultricies tristique nulla
+                aliquet enim tortor. In fermentum posuere urna nec tincidunt
+                praesent. Et magnis dis parturient montes. Bibendum arcu vitae
+                elementum curabitur vitae. Rhoncus dolor purus non enim praesent
+                elementum facilisis. Tortor consequat id porta nibh venenatis
+                cras sed felis. Bibendum arcu vitae elementum curabitur vitae
+                nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Egestas sed sed risus pretium quam vulputate dignissim.
+                In dictum non consectetur a erat. Pellentesque elit ullamcorper
+                dignissim cras tincidunt lobortis. Consectetur adipiscing elit
+                duis tristique sollicitudin nibh. Eget lorem dolor sed viverra
+                ipsum nunc aliquet. Turpis egestas maecenas pharetra convallis
+                posuere. Scelerisque viverra mauris in aliquam sem fringilla ut.
+                Id donec ultrices tincidunt arcu non sodales. Auctor neque vitae
+                tempus quam pellentesque nec nam aliquam sem. Lacinia quis vel
+                eros donec ac odio tempor orci. Ultricies tristique nulla
+                aliquet enim tortor. In fermentum posuere urna nec tincidunt
+                praesent. Et magnis dis parturient montes. Bibendum arcu vitae
+                elementum curabitur vitae. Rhoncus dolor purus non enim praesent
+                elementum facilisis. Tortor consequat id porta nibh venenatis
+                cras sed felis. Bibendum arcu vitae elementum curabitur vitae
+                nunc.
+                <p>(End of Sushi Section) <a href="#sushi">Back To Top</a></p>
+              </div>
+            </section>
           </div>
-        </section>
+        </div>
       </div>
     </main>
     <script
