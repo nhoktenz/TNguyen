@@ -1,12 +1,7 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 110px; /* height of sticky header + padding */
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 body {
