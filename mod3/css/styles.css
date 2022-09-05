@@ -56,18 +56,18 @@ a.nav-link:hover {
   color: white;
 }
 /***** HOME ****/
-section > div > p {
+section > div > div > p {
   text-align: right;
 }
-#chicken {
+#chicken-container {
   background-color: rgb(66, 194, 233);
 }
 
-#beef {
+#beef-container {
   background-color: rgb(221, 13, 228);
 }
 
-#sushi {
+#sushi-container {
   background-color: chocolate;
 }
 
