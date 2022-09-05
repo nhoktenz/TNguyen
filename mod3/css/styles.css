@@ -40,6 +40,16 @@ body {
   text-decoration: none;
   color: green;
 }
+.dropdown-btn {
+  border: 1px solid black;
+  background-color: white;
+}
+.dropdown-btn:hover {
+  background-color: #f5c2d4;
+}
+.fa-bars {
+  color: #61122f;
+}
 
 #header-nav button.navbar-toggler {
   clear: both;
