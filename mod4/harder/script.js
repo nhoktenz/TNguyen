@@ -72,4 +72,25 @@ WARNING!!! WARNING!!!
       helloSpeaker.speak(names[i]);
     }
   }
+
+  /***  CALLBACK FUNCTION MAP  *****/
+  function helloByeFuc(e) {
+    var firstLetter = e.charAt(0).toLocaleLowerCase();
+    if (firstLetter === "j") {
+      return byeSpeaker.speak(e);
+    } else {
+      return helloSpeaker.speak(e);
+    }
+  }
+  names.map(helloByeFuc);
+
+  /***  INLINE MAP  *****/
+  names.map(function (e) {
+    var firstLetter = e.charAt(0).toLocaleLowerCase();
+    if (firstLetter === "j") {
+      byeSpeaker.speak(e);
+    } else {
+      helloSpeaker.speak(e);
+    }
+  });
 })();
