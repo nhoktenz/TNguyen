@@ -46,7 +46,9 @@ WARNING!!! WARNING!!!
     "Laura",
     "Jim",
   ];
-
+  console.log(
+    "--------------------SOLUTION FOR COURSERA REQUIREMENT------------------------"
+  );
   // STEP 10:
   // Loop over the names array and say either 'Hello' or "Good Bye"
   // using either the helloSpeaker's or byeSpeaker's 'speak' method.
@@ -72,7 +74,10 @@ WARNING!!! WARNING!!!
       helloSpeaker.speak(names[i]);
     }
   }
-  console.log("--------------------------");
+
+  console.log(
+    "---------------------USING CALLBACK MAP FUNCTION------------------------"
+  );
 
   /***  CALLBACK FUNCTION MAP  *****/
   function helloByeFuc(e) {
@@ -84,7 +89,10 @@ WARNING!!! WARNING!!!
     }
   }
   names.map(helloByeFuc);
-  console.log("--------------------------");
+
+  console.log(
+    "----------------------------USING INLINE MAP FUNCTION------------------"
+  );
 
   /*** BONUS: INLINE MAP  *****/
   names.map(function (e) {
@@ -95,7 +103,9 @@ WARNING!!! WARNING!!!
       helloSpeaker.speak(e);
     }
   });
-  console.log("--------------------------");
+  console.log(
+    "------------BONUS: USING REDUCE TO MAKE HELLO AND GOODBYE SEPERATE-----------"
+  );
 
   /*** BONUS: USE REDUCE TO CREATE 2 ARRAYS  *****/
   var initialValue = { hello: [], bye: [] };
