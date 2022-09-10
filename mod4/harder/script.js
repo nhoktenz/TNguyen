@@ -72,7 +72,7 @@ WARNING!!! WARNING!!!
       helloSpeaker.speak(names[i]);
     }
   }
-
+  console.log("--------------------------");
   /***  CALLBACK FUNCTION MAP  *****/
   function helloByeFuc(e) {
     var firstLetter = e.charAt(0).toLocaleLowerCase();
@@ -83,8 +83,8 @@ WARNING!!! WARNING!!!
     }
   }
   names.map(helloByeFuc);
-
-  /***  INLINE MAP  *****/
+  console.log("--------------------------");
+  /*** BONUS: INLINE MAP  *****/
   names.map(function (e) {
     var firstLetter = e.charAt(0).toLocaleLowerCase();
     if (firstLetter === "j") {
@@ -93,4 +93,19 @@ WARNING!!! WARNING!!!
       helloSpeaker.speak(e);
     }
   });
+  console.log("--------------------------");
+
+  /*** BONUS: USE REDUCE TO CREATE 2 ARRAYS  *****/
+  var initialValue = { hello: [], bye: [] };
+  var ini = "";
+  names.reduce(function (previousValue, currentValue, i) {
+    var firstLetter = names[i].charAt(0).toLocaleLowerCase();
+    if (firstLetter === "j") {
+      initialValue.bye.push(names[i]);
+    } else {
+      initialValue.hello.push(names[i]);
+    }
+  }, ini);
+  initialValue.hello.map((e) => console.log(helloSpeaker.speakSimple(e)));
+  initialValue.bye.map((e) => console.log(byeSpeaker.speakSimple(e)));
 })();
