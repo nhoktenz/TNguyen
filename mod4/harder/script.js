@@ -59,7 +59,7 @@
     "------------BONUS: USING REDUCE TO MAKE HELLO AND GOODBYE SEPERATE-----------"
   );
 
-  /*** BONUS: USE REDUCE TO CREATE 2 ARRAYS  *****/
+  /*** BONUS: USE REDUCE TO CREATE HELLO and GOODBYE SEPERATELY *****/
   var initialValue = { hello: [], bye: [] };
   var ini = "";
   names.reduce(function (previousValue, currentValue, i) {
