@@ -73,6 +73,7 @@ WARNING!!! WARNING!!!
     }
   }
   console.log("--------------------------");
+
   /***  CALLBACK FUNCTION MAP  *****/
   function helloByeFuc(e) {
     var firstLetter = e.charAt(0).toLocaleLowerCase();
@@ -84,6 +85,7 @@ WARNING!!! WARNING!!!
   }
   names.map(helloByeFuc);
   console.log("--------------------------");
+
   /*** BONUS: INLINE MAP  *****/
   names.map(function (e) {
     var firstLetter = e.charAt(0).toLocaleLowerCase();
