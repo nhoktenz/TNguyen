@@ -168,30 +168,35 @@ $(function () {
           document.querySelector("#s3").className = "fa fa-star-o";
           document.querySelector("#s4").className = "fa fa-star-o";
           document.querySelector("#s5").className = "fa fa-star-o";
+          document.querySelector("#totalStars").innerHTML = "1-star rating";
         } else if (stars === 2) {
           document.querySelector("#s1").className = "fa fa-star";
           document.querySelector("#s2").className = "fa fa-star";
           document.querySelector("#s3").className = "fa fa-star-o";
           document.querySelector("#s4").className = "fa fa-star-o";
           document.querySelector("#s5").className = "fa fa-star-o";
+          document.querySelector("#totalStars").innerHTML = "2-stars rating";
         } else if (stars === 3) {
           document.querySelector("#s1").className = "fa fa-star";
           document.querySelector("#s2").className = "fa fa-star";
           document.querySelector("#s3").className = "fa fa-star";
           document.querySelector("#s4").className = "fa fa-star-o";
           document.querySelector("#s5").className = "fa fa-star-o";
+          document.querySelector("#totalStars").innerHTML = "3-stars rating";
         } else if (stars === 4) {
           document.querySelector("#s1").className = "fa fa-star";
           document.querySelector("#s2").className = "fa fa-star";
           document.querySelector("#s3").className = "fa fa-star";
           document.querySelector("#s4").className = "fa fa-star";
           document.querySelector("#s5").className = "fa fa-star-o";
+          document.querySelector("#totalStars").innerHTML = "5-stars rating";
         } else {
           document.querySelector("#s1").className = "fa fa-star";
           document.querySelector("#s2").className = "fa fa-star";
           document.querySelector("#s3").className = "fa fa-star";
           document.querySelector("#s4").className = "fa fa-star";
           document.querySelector("#s5").className = "fa fa-star";
+          document.querySelector("#totalStars").innerHTML = "5-stars rating";
         }
       },
       false
