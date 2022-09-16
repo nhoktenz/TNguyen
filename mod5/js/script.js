@@ -52,11 +52,35 @@ $(function () {
     classes = classes.replace(new RegExp("active", "g"), "");
     document.querySelector("#navHomeButton").className = classes;
 
+    // Remove 'active' from About button
+    var classes = document.querySelector("#navAboutButton").className;
+    classes = classes.replace(new RegExp("active", "g"), "");
+    document.querySelector("#navAboutButton").className = classes;
+
     // Add 'active' to menu button if not already there
     classes = document.querySelector("#navMenuButton").className;
     if (classes.indexOf("active") === -1) {
       classes += " active";
       document.querySelector("#navMenuButton").className = classes;
+    }
+  };
+
+  var switchAboutToActive = function () {
+    // Remove 'active' from home button
+    var classes = document.querySelector("#navHomeButton").className;
+    classes = classes.replace(new RegExp("active", "g"), "");
+    document.querySelector("#navHomeButton").className = classes;
+
+    // Remove 'active' from Menu button
+    var classes = document.querySelector("#navMenuButton").className;
+    classes = classes.replace(new RegExp("active", "g"), "");
+    document.querySelector("#navMenuButton").className = classes;
+
+    // Add 'active' to menu button if not already there
+    classes = document.querySelector("#navAboutButton").className;
+    if (classes.indexOf("active") === -1) {
+      classes += " active";
+      document.querySelector("#navAboutButton").className = classes;
     }
   };
 
@@ -155,13 +179,14 @@ $(function () {
       aboutHtml,
       function (aboutHtml) {
         var stars = randomIntFromInterval(1, 5);
-        console.log(stars);
+
         var homeViewHtml = insertProperty(
           aboutHtml,
           "About Stars",
           "'" + stars + "'"
         );
         insertHtml("#main-content", homeViewHtml);
+        switchAboutToActive();
         if (stars === 1) {
           document.querySelector("#s1").className = "fa fa-star";
           document.querySelector("#s2").className = "fa fa-star-o";
