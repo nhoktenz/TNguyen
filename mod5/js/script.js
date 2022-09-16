@@ -151,8 +151,51 @@ $(function () {
   };
 
   dc.loadAbout = function () {
-    showLoading("#main-content");
-    $ajaxUtils.sendGetRequest(aboutHtml, buildAndShowCategoriesHTML);
+    $ajaxUtils.sendGetRequest(
+      aboutHtml,
+      function (aboutHtml) {
+        var stars = randomIntFromInterval(1, 5);
+        console.log(stars);
+        var homeViewHtml = insertProperty(
+          aboutHtml,
+          "About Stars",
+          "'" + stars + "'"
+        );
+        insertHtml("#main-content", homeViewHtml);
+        if (stars === 1) {
+          document.querySelector("#s1").className = "fa fa-star";
+          document.querySelector("#s2").className = "fa fa-star-o";
+          document.querySelector("#s3").className = "fa fa-star-o";
+          document.querySelector("#s4").className = "fa fa-star-o";
+          document.querySelector("#s5").className = "fa fa-star-o";
+        } else if (stars === 2) {
+          document.querySelector("#s1").className = "fa fa-star";
+          document.querySelector("#s2").className = "fa fa-star";
+          document.querySelector("#s3").className = "fa fa-star-o";
+          document.querySelector("#s4").className = "fa fa-star-o";
+          document.querySelector("#s5").className = "fa fa-star-o";
+        } else if (stars === 3) {
+          document.querySelector("#s1").className = "fa fa-star";
+          document.querySelector("#s2").className = "fa fa-star";
+          document.querySelector("#s3").className = "fa fa-star";
+          document.querySelector("#s4").className = "fa fa-star-o";
+          document.querySelector("#s5").className = "fa fa-star-o";
+        } else if (stars === 4) {
+          document.querySelector("#s1").className = "fa fa-star";
+          document.querySelector("#s2").className = "fa fa-star";
+          document.querySelector("#s3").className = "fa fa-star";
+          document.querySelector("#s4").className = "fa fa-star";
+          document.querySelector("#s5").className = "fa fa-star-o";
+        } else {
+          document.querySelector("#s1").className = "fa fa-star";
+          document.querySelector("#s2").className = "fa fa-star";
+          document.querySelector("#s3").className = "fa fa-star";
+          document.querySelector("#s4").className = "fa fa-star";
+          document.querySelector("#s5").className = "fa fa-star";
+        }
+      },
+      false
+    );
   };
   //create random number function
   function randomIntFromInterval(min, max) {
