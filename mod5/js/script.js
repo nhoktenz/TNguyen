@@ -196,6 +196,8 @@ $(function () {
           document.querySelector("#s5").className = "fa fa-star-o";
           document.querySelector("#totalStars").innerHTML =
             "<b>1-star</b> rating";
+          document.querySelector("#smiley").className =
+            "fa-regular fa-face-grin";
         } else if (stars === 2) {
           document.querySelector("#s1").className = "fa fa-star";
           document.querySelector("#s2").className = "fa fa-star";
@@ -204,6 +206,8 @@ $(function () {
           document.querySelector("#s5").className = "fa fa-star-o";
           document.querySelector("#totalStars").innerHTML =
             "<b>2-stars</b> rating";
+          document.querySelector("#smiley").className =
+            "fa-regular fa-face-grin-squint-tears";
         } else if (stars === 3) {
           document.querySelector("#s1").className = "fa fa-star";
           document.querySelector("#s2").className = "fa fa-star";
@@ -212,6 +216,8 @@ $(function () {
           document.querySelector("#s5").className = "fa fa-star-o";
           document.querySelector("#totalStars").innerHTML =
             "<b>3-stars</b> rating";
+          document.querySelector("#smiley").className =
+            "fa-regular fa-face-smile-wink";
         } else if (stars === 4) {
           document.querySelector("#s1").className = "fa fa-star";
           document.querySelector("#s2").className = "fa fa-star";
@@ -220,6 +226,8 @@ $(function () {
           document.querySelector("#s5").className = "fa fa-star-o";
           document.querySelector("#totalStars").innerHTML =
             "<b>4-stars</b> rating";
+          document.querySelector("#smiley").className =
+            "fa-regular fa-face-smile-beam";
         } else {
           document.querySelector("#s1").className = "fa fa-star";
           document.querySelector("#s2").className = "fa fa-star";
@@ -228,6 +236,8 @@ $(function () {
           document.querySelector("#s5").className = "fa fa-star";
           document.querySelector("#totalStars").innerHTML =
             "<b>5-stars</b> rating";
+          document.querySelector("#smiley").className =
+            "fa-regular fa-face-grin-hearts";
         }
       },
       false
