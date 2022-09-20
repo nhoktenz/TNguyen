@@ -177,6 +177,7 @@ $(function () {
 
   dc.loadAbout = function () {
     showLoading("#main-content");
+    switchAboutToActive();
     $ajaxUtils.sendGetRequest(
       aboutHtml,
       function (aboutHtml) {
@@ -184,11 +185,11 @@ $(function () {
 
         var homeViewHtml = insertProperty(
           aboutHtml,
-          "About Stars",
+          "About Rating",
           "'" + stars + "'"
         );
         insertHtml("#main-content", homeViewHtml);
-        switchAboutToActive();
+
         if (stars === 1) {
           document.querySelector("#s1").className = "fa fa-star";
           document.querySelector("#s2").className = "fa fa-star-o";
@@ -324,7 +325,7 @@ $(function () {
             );
             insertHtml("#main-content", menuItemsViewHtml);
           },
-          false
+          false // ajax does not process snippet as json
         );
       },
       false
