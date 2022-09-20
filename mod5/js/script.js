@@ -176,6 +176,7 @@ $(function () {
   };
 
   dc.loadAbout = function () {
+    showLoading("#main-content");
     $ajaxUtils.sendGetRequest(
       aboutHtml,
       function (aboutHtml) {
