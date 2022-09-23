@@ -24,6 +24,7 @@
           placeholder="list comma separated dishes you usually have for lunch"
           class="form-control"
           ng-model="lunch"
+          style="border: 1px solid {{borderColor}}"
         />
       </div>
       <div class="form-group">
@@ -33,7 +34,7 @@
       </div>
       <div class="form-group message">
         <!-- Your message can go here. -->
-        <p ng-class="">{{result}}</p>
+        <p class="text-{{color}}">{{result}}</p>
       </div>
     </div>
   </body>
