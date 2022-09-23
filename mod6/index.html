@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="styles/bootstrap.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
     <style>
       .message {
         font-size: 1.3em;
@@ -28,13 +35,13 @@
         />
       </div>
       <div class="form-group">
-        <button class="btn btn-default" ng-click="checkLunch()">
+        <button class="btn btn-primary" ng-click="checkLunch()">
           Check If Too Much
         </button>
       </div>
       <div class="form-group message">
         <!-- Your message can go here. -->
-        <p class="text-{{color}}">{{result}}</p>
+        <span class="text-{{color}} {{border}} p-1">{{result}}</span>
       </div>
     </div>
   </body>
