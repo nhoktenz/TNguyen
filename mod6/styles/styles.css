@@ -1,3 +1,7 @@
+.message {
+  font-size: 1.3em;
+  font-weight: bold;
+}
 .border-success {
   border: 1px solid green;
 }
