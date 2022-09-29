@@ -12,8 +12,10 @@
     $scope.color = "";
 
     $scope.checkLunch = function () {
-      var items = $scope.lunch.split(",").filter((s) => s.trim());
+      var removeQuote = $scope.lunch.replace(/['"]+/g, "");
+      var items = removeQuote.split(",").filter((s) => s.trim());
       var count = 0;
+
       for (var i = 0; i < items.length; i++) {
         count += 1;
       }
