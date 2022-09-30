@@ -43,7 +43,13 @@
     return function (input, pricePerItem, quantity) {
       input = input || "";
       input = pricePerItem * quantity;
-      return "$$$" + input;
+      var formatter = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      });
+
+      input = formatter.format(input);
+      return "$$" + input;
     };
   }
   function ShoppingListCheckOffService() {
