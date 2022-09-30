@@ -98,7 +98,12 @@
             <hr />
             <ul class="list-unstyled">
               <li ng-repeat="item in boughtList.total" ng-if="$last">
-                <b>Total <i class="bi bi-cash-coin"></i> {{item | currency}}</b>
+                <h4>
+                  <b
+                    >Total <i class="bi bi-cash-coin"></i> {{item |
+                    currency}}</b
+                  >
+                </h4>
               </li>
             </ul>
           </div>
