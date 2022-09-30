@@ -60,6 +60,9 @@
           </ul>
           <div ng-if="buyList.message" class="emptyMessage text-center">
             {{buyList.message}}
+            <i class="bi bi-bag-check-fill text-success"></i>
+            <i class="bi bi-emoji-laughing text-success"></i>
+            <i class="bi bi-check-all text-success"></i>
           </div>
         </div>
 
@@ -80,7 +83,8 @@
             ng-hide="boughtList.items.length"
             class="emptyMessage text-center"
           >
-            Nothing Bought Yet
+            Nothing Bought Yet <i class="bi bi-bag"></i>
+            <i class="bi bi-emoji-frown"></i>
           </div>
         </div>
       </div>
