@@ -5,9 +5,13 @@
     .module("ShoppingListCheckOff", [])
     .controller("ToBuyController", ToBuyController)
     .controller("AlreadyBoughtController", AlreadyBoughtController)
-    .service("ShoppingListCheckOffService", ShoppingListCheckOffService);
+    .service("ShoppingListCheckOffService", ShoppingListCheckOffService)
+    .filter("customPrice", CustomPriceFilterFactory);
 
-  ToBuyController.$inject = ["ShoppingListCheckOffService"];
+  ToBuyController.$inject = [
+    "ShoppingListCheckOffService",
+    "customPriceFilter",
+  ];
   function ToBuyController(ShoppingListCheckOffService) {
     var buyList = this;
 
@@ -15,20 +19,31 @@
 
     buyList.buyItem = function (itemIndex) {
       ShoppingListCheckOffService.buyItem(itemIndex);
-      console.log(buyList.items.length);
       if (buyList.items.length === 0) {
         buyList.message = "Everything is bought!";
       }
     };
   }
 
-  AlreadyBoughtController.$inject = ["ShoppingListCheckOffService"];
-  function AlreadyBoughtController(ShoppingListCheckOffService) {
+  AlreadyBoughtController.$inject = [
+    "ShoppingListCheckOffService",
+    "customPriceFilter",
+  ];
+  function AlreadyBoughtController(
+    ShoppingListCheckOffService,
+    customPriceFilter
+  ) {
     var boughtList = this;
 
     boughtList.items = ShoppingListCheckOffService.getBoughtItems();
   }
 
+  function CustomPriceFilterFactory() {
+    return function (quantity, pricePerItem) {
+      var totalPrice = quantity * pricePerItem;
+      return "$$$" + totalPrice;
+    };
+  }
   function ShoppingListCheckOffService() {
     var service = this;
 
@@ -48,11 +63,21 @@
     };
 
     service.buyItem = function (itemIndex) {
+      //   var name = toBuyItems[itemIndex].name;
+      //   var pricePerItem = toBuyItems[itemIndex].pricePerItem;
+      //   var quantity = toBuyItems[itemIndex].quantity;
+      //   var totalPrice = pricePerItem * quantity;
+      //   var newItem = {
+      //     name: name,
+      //     quantity: quantity,
+      //     pricePerItem: pricePerItem,
+      //   };
+      //   console.log(newItem);
       boughtItems.push(toBuyItems[itemIndex]);
+      //boughtItems.push(newItem);
       toBuyItems.splice(itemIndex, 1);
-      if (boughtItems.length > 0) {
-        isEmpty = "";
-      }
+      console.log(boughtItems);
+      console.log(toBuyItems);
     };
 
     service.getBoughtItems = function () {

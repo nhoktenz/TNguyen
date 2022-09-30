@@ -32,7 +32,8 @@
           <h2>To Buy:</h2>
           <ul>
             <li ng-repeat="item in buyList.items">
-              Buy {{item.quantity}} {{item.name}}
+              Buy
+              <input type="text" ng-model="item.quantity" /> {{item.name}}
               <button
                 ng-click="buyList.buyItem($index);"
                 type="button"
