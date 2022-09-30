@@ -41,6 +41,7 @@
               >
                 <span class="bi bi-bag-check"></span> Bought
               </button>
+              <div>Price: ${{item.pricePerItem}}/ item</div>
             </li>
           </ul>
           <div ng-if="buyList.message" class="emptyMessage">
@@ -57,7 +58,8 @@
           <h2>Already Bought:</h2>
           <ul>
             <li ng-repeat="item in boughtList.items">
-              Bought {{item.quantity}} {{item.name}}
+              Bought {{item.quantity}} {{item.name}} for total price of {{items|
+              customPrice : item.pricePerItem : item.quantity }}
             </li>
           </ul>
           <div ng-hide="boughtList.items.length" class="emptyMessage">

@@ -29,19 +29,25 @@
     "ShoppingListCheckOffService",
     "customPriceFilter",
   ];
-  function AlreadyBoughtController(
-    ShoppingListCheckOffService,
-    customPriceFilter
-  ) {
+  function AlreadyBoughtController(ShoppingListCheckOffService) {
     var boughtList = this;
 
     boughtList.items = ShoppingListCheckOffService.getBoughtItems();
+    boughtList.total = function () {
+      var price = 0;
+      return price;
+    };
   }
 
   function CustomPriceFilterFactory() {
-    return function (quantity, pricePerItem) {
-      var totalPrice = quantity * pricePerItem;
-      return "$$$" + totalPrice;
+    return function (input, pricePerItem, quantity) {
+      input = input || "";
+      console.log(input);
+      console.log(pricePerItem);
+      console.log(quantity);
+      input = pricePerItem * quantity;
+      console.log(input);
+      return "$$$" + input;
     };
   }
   function ShoppingListCheckOffService() {
