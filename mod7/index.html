@@ -29,7 +29,7 @@
           ng-controller="ToBuyController as buyList"
           class="col-md-6"
         >
-          <h2 class="text-center">To Buy:</h2>
+          <h2 class="text-center">To Buy <i class="bi bi-cart4"></i></h2>
           <ul>
             <li ng-repeat="item in buyList.items">
               <div class="form-group row">
@@ -72,7 +72,9 @@
           ng-controller="AlreadyBoughtController as boughtList"
           class="col-md-6"
         >
-          <h2 class="text-center">Already Bought:</h2>
+          <h2 class="text-center">
+            Already Bought <i class="bi bi-cart-check"></i></i>
+          </h2>
           <ul>
             <li ng-repeat="item in boughtList.items">
               Bought <b>{{item.quantity}} {{item.name}}</b> for total price of
