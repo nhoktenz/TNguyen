@@ -45,16 +45,21 @@
                   {{item.name}}
                 </div>
                 <div class="col-md-3">
-                  <p><em><i class="bi bi-cash-coin"></i> ${{item.pricePerItem}}/ item</em></p>
+                  <p>
+                    <em
+                      ><i class="bi bi-cash-coin"></i> ${{item.pricePerItem}}/
+                      item</em
+                    >
+                  </p>
                 </div>
               </div>
 
               <button
                 ng-click="buyList.buyItem($index);"
                 type="button"
-                class="btn btn-info col-md-12"
+                class="btn btn-success col-md-12"
               >
-                <span class="bi bi-bag-check"></span> Bought
+                <span class="bi bi-bag-plus text-light"></span> Bought
               </button>
             </li>
           </ul>
@@ -73,7 +78,7 @@
           class="col-md-6"
         >
           <h2 class="text-center">
-            Already Bought <i class="bi bi-cart-check"></i></i>
+            Already Bought <i class="bi bi-cart-check"></i>
           </h2>
           <ul>
             <li ng-repeat="item in boughtList.items">
