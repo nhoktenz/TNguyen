@@ -42,11 +42,7 @@
   function CustomPriceFilterFactory() {
     return function (input, pricePerItem, quantity) {
       input = input || "";
-      console.log(input);
-      console.log(pricePerItem);
-      console.log(quantity);
       input = pricePerItem * quantity;
-      console.log(input);
       return "$$$" + input;
     };
   }
@@ -55,11 +51,11 @@
 
     //List of shopping items
     var toBuyItems = [
-      { name: "cookie(s)", quantity: 10, pricePerItem: 1 },
-      { name: "can(s) of cocacola", quantity: 5, pricePerItem: 2 },
-      { name: "bottle(s) of energy-drinks", quantity: 3, pricePerItem: 2.5 },
-      { name: "bag(s) of snacks", quantity: 2, pricePerItem: 2 },
-      { name: "bag(s) of noodle", quantity: 4, pricePerItem: 3 },
+      { name: "bag(s) of cookie", quantity: 10, pricePerItem: 1 },
+      { name: "bottle(s) of milk", quantity: 5, pricePerItem: 3 },
+      { name: "bottle(s) of orange juice", quantity: 3, pricePerItem: 2.5 },
+      { name: "bag(s) of snacks", quantity: 2, pricePerItem: 4 },
+      { name: "bag(s) of bread", quantity: 4, pricePerItem: 2 },
     ];
 
     var boughtItems = [];
@@ -69,21 +65,8 @@
     };
 
     service.buyItem = function (itemIndex) {
-      //   var name = toBuyItems[itemIndex].name;
-      //   var pricePerItem = toBuyItems[itemIndex].pricePerItem;
-      //   var quantity = toBuyItems[itemIndex].quantity;
-      //   var totalPrice = pricePerItem * quantity;
-      //   var newItem = {
-      //     name: name,
-      //     quantity: quantity,
-      //     pricePerItem: pricePerItem,
-      //   };
-      //   console.log(newItem);
       boughtItems.push(toBuyItems[itemIndex]);
-      //boughtItems.push(newItem);
       toBuyItems.splice(itemIndex, 1);
-      console.log(boughtItems);
-      console.log(toBuyItems);
     };
 
     service.getBoughtItems = function () {
