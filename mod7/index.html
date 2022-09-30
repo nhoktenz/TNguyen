@@ -44,16 +44,18 @@
                   />
                   {{item.name}}
                 </div>
-
-                <button
-                  ng-click="buyList.buyItem($index);"
-                  type="button"
-                  class="btn btn-info col-md-3"
-                >
-                  <span class="bi bi-bag-check"></span> Bought
-                </button>
-                <p><em>Price: ${{item.pricePerItem}}/ item</em></p>
+                <div class="col-md-3">
+                  <p><em>Price: ${{item.pricePerItem}}/ item</em></p>
+                </div>
               </div>
+
+              <button
+                ng-click="buyList.buyItem($index);"
+                type="button"
+                class="btn btn-info col-md-12"
+              >
+                <span class="bi bi-bag-check"></span> Bought
+              </button>
             </li>
           </ul>
           <div ng-if="buyList.message" class="emptyMessage text-center">
