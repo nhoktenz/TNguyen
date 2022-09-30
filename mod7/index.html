@@ -37,6 +37,8 @@
                   Buy
                   <input
                     type="number"
+                    onkeypress="return event.charCode >= 48"
+                    min="0"
                     ng-model="item.quantity"
                     class="col-md-2"
                   />
