@@ -25,18 +25,12 @@
     };
   }
 
-  AlreadyBoughtController.$inject = [
-    "ShoppingListCheckOffService",
-    "customPriceFilter",
-  ];
+  AlreadyBoughtController.$inject = ["ShoppingListCheckOffService"];
   function AlreadyBoughtController(ShoppingListCheckOffService) {
     var boughtList = this;
 
     boughtList.items = ShoppingListCheckOffService.getBoughtItems();
-    boughtList.total = function () {
-      var price = 0;
-      return price;
-    };
+    boughtList.total = ShoppingListCheckOffService.getBoughtItemsTotalPrice();
   }
 
   function CustomPriceFilterFactory() {
@@ -65,6 +59,7 @@
     ];
 
     var boughtItems = [];
+    var totalPriceList = [];
 
     service.getToBuyItems = function () {
       return toBuyItems;
@@ -73,10 +68,19 @@
     service.buyItem = function (itemIndex) {
       boughtItems.push(toBuyItems[itemIndex]);
       toBuyItems.splice(itemIndex, 1);
+      var total = boughtItems.reduce(
+        (n, { quantity, pricePerItem }) => n + quantity * pricePerItem,
+        0
+      );
+      totalPriceList.push(total);
     };
 
     service.getBoughtItems = function () {
       return boughtItems;
+    };
+
+    service.getBoughtItemsTotalPrice = function () {
+      return totalPriceList;
     };
   }
 })();

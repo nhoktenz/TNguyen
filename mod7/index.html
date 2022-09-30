@@ -86,12 +86,21 @@
               <i class="bi bi-check-all text-success"></i>
             </li>
           </ul>
+
           <div
             ng-hide="boughtList.items.length"
             class="emptyMessage text-center"
           >
             Nothing Bought Yet <i class="bi bi-bag"></i>
             <i class="bi bi-emoji-frown"></i>
+          </div>
+          <div ng-show="boughtList.items.length" class="text-end">
+            <hr />
+            <ul class="list-unstyled">
+              <li ng-repeat="item in boughtList.total" ng-if="$last">
+                <b>Total: {{item | currency}}</b>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
