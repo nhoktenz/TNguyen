@@ -55,11 +55,11 @@
 
     //List of shopping items
     var toBuyItems = [
-      { name: "cookies", quantity: 10, pricePerItem: 1 },
-      { name: "can of cocacola", quantity: 5, pricePerItem: 2 },
-      { name: "bottles of energy-drinks", quantity: 3, pricePerItem: 2.5 },
-      { name: "bags of snacks", quantity: 2, pricePerItem: 2 },
-      { name: "bags of noodle", quantity: 4, pricePerItem: 3 },
+      { name: "cookie(s)", quantity: 10, pricePerItem: 1 },
+      { name: "can(s) of cocacola", quantity: 5, pricePerItem: 2 },
+      { name: "bottle(s) of energy-drinks", quantity: 3, pricePerItem: 2.5 },
+      { name: "bag(s) of snacks", quantity: 2, pricePerItem: 2 },
+      { name: "bag(s) of noodle", quantity: 4, pricePerItem: 3 },
     ];
 
     var boughtItems = [];

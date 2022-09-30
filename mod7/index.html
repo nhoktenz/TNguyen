@@ -32,20 +32,25 @@
           <h2 class="text-center">To Buy:</h2>
           <ul>
             <li ng-repeat="item in buyList.items">
-              <div class="row">
-                <div class="col-md-10">
+              <div class="form-group row">
+                <div class="col-md-9">
                   Buy
-                  <input type="number" ng-model="item.quantity" /> {{item.name}}
-                  <div>Price: ${{item.pricePerItem}}/ item</div>
+                  <input
+                    type="number"
+                    ng-model="item.quantity"
+                    class="col-md-2"
+                  />
+                  {{item.name}}
                 </div>
 
                 <button
                   ng-click="buyList.buyItem($index);"
                   type="button"
-                  class="btn btn-info col-auto"
+                  class="btn btn-info col-md-3"
                 >
                   <span class="bi bi-bag-check"></span> Bought
                 </button>
+                <p><em>Price: ${{item.pricePerItem}}/ item</em></p>
               </div>
             </li>
           </ul>
@@ -63,8 +68,8 @@
           <h2 class="text-center">Already Bought:</h2>
           <ul>
             <li ng-repeat="item in boughtList.items">
-              Bought {{item.quantity}} {{item.name}} for total price of {{items|
-              customPrice : item.pricePerItem : item.quantity }}
+              Bought <b>{{item.quantity}} {{item.name}}</b> for total price of
+              <b>{{items| customPrice : item.pricePerItem : item.quantity }}</b>
             </li>
           </ul>
           <div
