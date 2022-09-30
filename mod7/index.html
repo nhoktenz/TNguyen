@@ -67,7 +67,6 @@
             {{buyList.message}}
             <i class="bi bi-bag-check-fill text-success"></i>
             <i class="bi bi-emoji-laughing text-success"></i>
-            <i class="bi bi-check-all text-success"></i>
           </div>
         </div>
 
@@ -84,6 +83,7 @@
             <li ng-repeat="item in boughtList.items">
               Bought <b>{{item.quantity}} {{item.name}}</b> for total price of
               <b>{{items| customPrice : item.pricePerItem : item.quantity }}</b>
+              <i class="bi bi-check-all text-success"></i>
             </li>
           </ul>
           <div
