@@ -38,7 +38,11 @@
           <ul>
             <li ng-repeat="item in buyList.items">
               Buy {{item.quantity}} {{item.name}}
-              <button type="button" class="btn btn-info">
+              <button
+                ng-click="buyList.buyItem($index);"
+                type="button"
+                class="btn btn-info"
+              >
                 <span class="bi bi-bag-check"></span> Bought
               </button>
             </li>
