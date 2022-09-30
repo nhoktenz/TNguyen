@@ -15,6 +15,10 @@
 
     buyList.buyItem = function (itemIndex) {
       ShoppingListCheckOffService.buyItem(itemIndex);
+      console.log(buyList.items.length);
+      if (buyList.items.length === 0) {
+        buyList.message = "Everything is bought!";
+      }
     };
   }
 
@@ -46,6 +50,9 @@
     service.buyItem = function (itemIndex) {
       boughtItems.push(toBuyItems[itemIndex]);
       toBuyItems.splice(itemIndex, 1);
+      if (boughtItems.length > 0) {
+        isEmpty = "";
+      }
     };
 
     service.getBoughtItems = function () {
