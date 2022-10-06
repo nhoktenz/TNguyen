@@ -21,28 +21,31 @@
   <body>
     <div class="container" ng-controller="NarrowItDownController as list">
       <h1>Narrow Down Your Chinese Menu Choice</h1>
-      <div class="form-group">
+      <div class="input-group mb-3">
         <input
           type="text"
-          placeholder="search term"
           class="form-control"
+          placeholder="search term"
+          class="form-control col-xs-8"
           ng-model="list.searchTerm"
+          aria-label="search term"
+          aria-describedby="search term"
         />
-      </div>
-      <div class="form-group narrow-button">
         <button
-          class="btn btn-primary"
+          class="btn btn-primary col-xs-4"
           ng-click="list.searchMenuItems(list.searchTerm)"
         >
           Narrow It Down For Me!
         </button>
       </div>
 
-      <div class="col-xs-12 message">{{ list.message }}</div>
-      <found-items
-        found="list.found"
-        on-remove="list.removeItem(index)"
-      ></found-items>
+      <div class="row">
+        <div class="col-xs-12 message">{{ list.message }}</div>
+        <found-items
+          found="list.found"
+          on-remove="list.removeItem(index)"
+        ></found-items>
+      </div>
     </div>
   </body>
 </html>
