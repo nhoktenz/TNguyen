@@ -50,3 +50,16 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+
+.list-item {
+  height: auto;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  margin-top: 5px;
+}
+
+.message {
+  height: auto;
+  color: red;
+  font-size: 1.5em;
+}
