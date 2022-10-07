@@ -11,14 +11,14 @@
   </div>
 </div> -->
 <table class="table table-striped">
-  <!-- <thead>
+  <thead ng-show="list.found.length">
     <tr>
       <th scope="col">Short Name</th>
       <th scope="col">Item Name</th>
       <th scope="col">Description</th>
       <th></th>
     </tr>
-  </thead> -->
+  </thead>
   <tbody>
     <tr ng-repeat="item in list.found">
       <th>{{item.short_name}}</th>
