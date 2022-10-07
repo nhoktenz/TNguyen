@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="item in list.found">
-      <th>{{item.short_name}}</th>
+      <th scope="row">{{item.short_name}}</th>
       <td>{{item.name}}</td>
       <td>{{item.description}}</td>
       <td>
@@ -17,7 +17,7 @@
           ng-click="list.onRemove({index: $index});"
           class="btn btn-danger"
         >
-          Don't want this one!
+          <i class="bi bi-trash3"></i> Don't want this one!
         </button>
       </td>
     </tr>

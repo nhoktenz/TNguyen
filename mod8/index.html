@@ -40,11 +40,13 @@
       </div>
 
       <div class="row">
-        <div class="col-xs-12 message">{{ list.message }}</div>
         <found-items
           found="list.found"
           on-remove="list.removeItem(index)"
         ></found-items>
+        <div class="col-xs-12 bg-danger text-white message">
+          {{ list.message }}
+        </div>
       </div>
     </div>
   </body>

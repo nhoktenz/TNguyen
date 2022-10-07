@@ -47,7 +47,8 @@
     list.removeItem = function (index) {
       list.found.splice(index, 1);
       if (list.found.length === 0) {
-        list.message = "You didn't want any of the found items.";
+        list.message =
+          "You didn't want any of the found items - All items are removed";
       }
     };
   }
