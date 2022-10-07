@@ -57,28 +57,23 @@
     var service = this;
 
     service.getMatchedMenuItems = function (searchTerm) {
-      var foundItems = [];
       return $http({
         method: "GET",
         url: ApiBasePath + "/menu_items.json",
-      }).then(
-        function (response) {
-          var menuItems = response.data.menu_items;
+      }).then(function (response) {
+        var foundItems = [];
+        var menuItems = response.data.menu_items;
 
-          for (var i = 0; i < menuItems.length; i++) {
-            var item = menuItems[i];
-            var itemDesc = item.description;
-            if (itemDesc.search(searchTerm.toLowerCase()) != -1) {
-              foundItems.push(item);
-            }
+        for (var i = 0; i < menuItems.length; i++) {
+          var item = menuItems[i];
+          var itemDesc = item.description;
+          if (itemDesc.search(searchTerm.toLowerCase()) != -1) {
+            foundItems.push(item);
           }
-          console.log(foundItems);
-          return foundItems;
-        },
-        function (error) {
-          console.log(error);
         }
-      );
+        console.log(foundItems);
+        return foundItems;
+      });
     };
   }
 })();
