@@ -31,13 +31,11 @@
         },
       })
 
-      //.state("categories.items", {
       .state("items", {
         url: "/items/{categoryShortName}",
-        //url: "/{categoryShortName}",
         templateUrl: "src/menuapp/templates/items.template.html",
         controller: "ItemsListController as itm",
-        //params: { categoryShortName: null },
+        params: { categoryShortName: null },
         resolve: {
           items: [
             "$stateParams",

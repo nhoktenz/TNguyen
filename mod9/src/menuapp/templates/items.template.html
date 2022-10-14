@@ -44,7 +44,7 @@
     >Item: {{ itm.category.name }} ({{ itm.category.short_name }})</span
   >
 </div>
-<table>
+<table id="tableItems" class="table table-striped">
   <thead>
     <tr>
       <th>Short Name</th>
@@ -54,10 +54,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr
-      ng-repeat="item in itm.menu_items"
-      ng-class="{'even': $even, 'odd': $odd}"
-    >
+    <tr ng-repeat="item in itm.menu_items">
       <td>{{item.short_name}}</td>
       <td>{{ item.name }}</td>
       <td>{{ item.description }}</td>
