@@ -5,10 +5,10 @@
     .module("MenuApp")
     .controller("CategoriesListController", CategoriesListController);
 
-  CategoriesListController.$inject = ["MenuDataService", "categories"];
-  function CategoriesListController(MenuDataService, categories) {
-    var ctrl = this;
-
-    ctrl.categories = categories;
+  CategoriesListController.$inject = ["categories"];
+  function CategoriesListController(categories) {
+    var cat = this;
+    console.log(categories);
+    cat.categories = categories;
   }
 })();

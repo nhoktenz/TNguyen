@@ -5,12 +5,12 @@
     .module("MenuApp")
     .controller("ItemsListController", ItemsListController);
 
-  ItemsListController.$inject = ["MenuDataService", "items"];
-  function ItemsListController(MenuDataService, items) {
-    var ctrl = this;
+  ItemsListController.$inject = ["items"];
+  function ItemsListController(items) {
+    var itm = this;
 
     console.log(items);
-    ctrl.menu_items = items.menu_items;
-    ctrl.category = items.category;
+    itm.menu_items = items.menu_items;
+    itm.category = items.category;
   }
 })();

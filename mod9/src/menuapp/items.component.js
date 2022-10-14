@@ -4,7 +4,7 @@
   angular.module("MenuApp").component("items", {
     templateUrl: "src/menuapp/templates/items.template.html",
     bindings: {
-      category: "<",
+      //   category: "<",
       items: "<",
     },
   });

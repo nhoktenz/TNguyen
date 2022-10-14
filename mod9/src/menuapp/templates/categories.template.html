@@ -57,14 +57,14 @@
     <div class="menu">
       <ul>
         <li
-          ng-repeat="category in categoryList.categories"
-          ui-sref="categories.items({ categoryShortName: category.short_name })"
+          ng-repeat="category in cat.categories"
+          ui-sref="items({ categoryShortName: category.short_name })"
         >
           ({{category.short_name}}) {{category.name}}
         </li>
       </ul>
     </div>
 
-    <ui-view class="detail"></ui-view>
+    <!-- <ui-view class="detail"></ui-view> -->
   </div>
 </div>
