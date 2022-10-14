@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  background-color: #ddd;
+  background-color: rgb(161, 161, 230);
   text-align: center;
   padding: 10px 0 3px;
   font-size: 30px;
@@ -26,7 +26,7 @@ h1 {
 
 .breadcrumb {
   font-size: 13px;
-  background-color: #ddd;
+  background-color: rgb(161, 161, 230);
 }
 .breadcrumb a {
   color: rgb(156, 23, 23);

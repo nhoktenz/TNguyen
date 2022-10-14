@@ -32,7 +32,8 @@
       })
 
       .state("categories.items", {
-        url: "/items/{categoryShortName}",
+        //url: "/items/{categoryShortName}",
+        url: "/{categoryShortName}",
         templateUrl: "src/menuapp/templates/items.template.html",
         controller: "ItemsListController as ctrl",
         params: { categoryShortName: null },
