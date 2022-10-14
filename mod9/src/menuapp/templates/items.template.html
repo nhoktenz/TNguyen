@@ -33,32 +33,36 @@
     </div>
   </div>
 </nav>
-
-<h1 class="text-center pb-1">{{ itm.category.name }}</h1>
-<div class="breadcrumb justify-content-center">
-  <a ui-sref="home">Home</a>
-  <span class="separator">&gt;</span>
-  <a ui-sref="categories">Categories</a>
-  <span class="separator">&gt;</span>
-  <span class="actual"
-    >Item: {{ itm.category.name }} ({{ itm.category.short_name }})</span
+<div class="container">
+  <h1 class="text-center pb-1">{{ itm.category.name }}</h1>
+  <div class="breadcrumb justify-content-center">
+    <a ui-sref="home">Home</a>
+    <span class="separator">&gt;</span>
+    <a ui-sref="categories">Categories</a>
+    <span class="separator">&gt;</span>
+    <span class="actual"
+      >Item: {{ itm.category.name }} ({{ itm.category.short_name }})</span
+    >
+  </div>
+  <small ng-show="itm.category.special_instructions.length"
+    >**<i>{{itm.category.special_instructions}}</i></small
   >
+  <table id="tableItems" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Short Name</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in itm.menu_items">
+        <td>{{item.short_name}}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>${{ item.price_large }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<table id="tableItems" class="table table-striped">
-  <thead>
-    <tr>
-      <th>Short Name</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="item in itm.menu_items">
-      <td>{{item.short_name}}</td>
-      <td>{{ item.name }}</td>
-      <td>{{ item.description }}</td>
-      <td>${{ item.price_large }}</td>
-    </tr>
-  </tbody>
-</table>

@@ -35,25 +35,13 @@
 </nav>
 <div class="container">
   <h1 class="text-center">Our Categories</h1>
-  <!-- <div>
-    <ul>
-      <li ng-repeat="category in ctrl.categories">
-        <a ui-sref="categories.items({categoryShortName: category.short_name})"
-          >({{category.short_name}}) {{category.name}}</a
-        >
-      </li>
-    </ul>
-  </div>
 
-  <div>
-    <ui-view></ui-view>
-  </div> -->
   <div class="breadcrumb justify-content-center">
     <a ui-sref="home">Home</a>
     <span class="separator">&gt;</span>
     <span class="actual">Categories</span>
   </div>
-  <div class="categories">
+  <div class="categories text-center">
     <div class="menu">
       <ul>
         <li
@@ -68,3 +56,17 @@
     <!-- <ui-view class="detail"></ui-view> -->
   </div>
 </div>
+
+<!-- <div>
+    <ul>
+      <li ng-repeat="category in ctrl.categories">
+        <a ui-sref="categories.items({categoryShortName: category.short_name})"
+          >({{category.short_name}}) {{category.name}}</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <ui-view></ui-view>
+  </div> -->
