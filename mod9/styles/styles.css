@@ -33,6 +33,7 @@ h1 {
 }
 .breadcrumb a:hover {
   text-decoration: underline;
+  color: rgb(19, 41, 243);
 }
 .breadcrumb .actual {
   font-weight: bold;
@@ -103,13 +104,13 @@ h1 {
   font-size: 14px;
   padding: 5px 7px;
 }
-.table-striped > tbody > tr:nth-child(2n + 1) > td,
-.table-striped > tbody > tr:nth-child(2n + 1) > th {
+#tableItems.table-striped > tbody > tr:nth-child(2n + 1) > td,
+#tableItems.table-striped > tbody > tr:nth-child(2n + 1) > th {
   background-color: rgb(165, 196, 231);
 }
 
-.table-striped > tbody > tr:nth-child(2n) > td,
-.table-striped > tbody > tr:nth-child(2n) > th {
+#tableItems.table-striped > tbody > tr:nth-child(2n) > td,
+#tableItems.table-striped > tbody > tr:nth-child(2n) > th {
   background-color: rgb(166, 233, 218);
 }
 
