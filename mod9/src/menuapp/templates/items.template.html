@@ -1,6 +1,29 @@
-<ul>
-  <li ng-repeat="item in ctrl.list">
+<!-- <ul>
+  <li ng-repeat="item in ctrl.items">
     <b>{{ item.name }}</b> [{{ item.short_name }}]<br />
     {{ item.description }}
   </li>
-</ul>
+</ul> -->
+
+<h2 class="text-center pb-1">{{ ctrl.category.name }}</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Short Name</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      ng-repeat="item in ctrl.menu_items"
+      ng-class="{'even': $even, 'odd': $odd}"
+    >
+      <td>{{item.short_name}}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.description }}</td>
+      <td>${{ item.price_large }}</td>
+    </tr>
+  </tbody>
+</table>

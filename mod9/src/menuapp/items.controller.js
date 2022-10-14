@@ -9,6 +9,8 @@
   function ItemsListController(MenuDataService, items) {
     var ctrl = this;
 
-    ctrl.list = items;
+    console.log(items);
+    ctrl.menu_items = items.menu_items;
+    ctrl.category = items.category;
   }
 })();

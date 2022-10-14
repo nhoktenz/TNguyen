@@ -1,1 +1,45 @@
-<a ui-sref="categories">Check all our food categories</a>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Restaurant</a>
+    <div
+      id="nav_bar"
+      class="collapse navbar-collapse d-flex"
+      id="navbarTogglerDemo03"
+    >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active active-page"
+            aria-current="page"
+            ui-sref="home"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" ui-sref="categories"
+            >Categories</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container home">
+  <h1 class="welcome-text">Welcome to Our Restaurant</h1>
+  <div class="mt-3">
+    <a class="welcome-link" ui-sref="categories"
+      >Click here to check out our food categories</a
+    >
+  </div>
+</div>

@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Arial, Times;
+}
+
+h1 {
+  background-color: #ddd;
+  text-align: center;
+  padding: 10px 0 3px;
+  font-size: 30px;
+  color: rgb(158, 27, 27);
+  border: 1px solid #ccc;
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+
+.categories .menu {
+  min-height: 400px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  background-color: #ddd;
+}
+.breadcrumb a {
+  color: rgb(156, 23, 23);
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+.breadcrumb .actual {
+  font-weight: bold;
+}
+.home {
+  text-align: center;
+  width: 100%;
+}
+
+.welcome-link {
+  font-size: 18px;
+  color: #6079ff;
+  font-weight: normal;
+  text-decoration: underline;
+}
+.welcome-link:hover {
+  text-decoration: none;
+}
+.categories {
+  display: table;
+  width: 100%;
+}
+.categories .menu {
+  display: table-cell;
+  vertical-align: top;
+  min-width: 220px;
+  width: 1px;
+  background-color: rgb(37, 95, 223);
+  border: 1px solid #f5f5f5;
+  border-top: none;
+  border-bottom: none;
+}
+.categories .menu ul {
+  padding-left: 0;
+}
+.categories .menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  color: rgb(236, 229, 229);
+  font-size: 14px;
+}
+.categories .menu ul li:hover {
+  background-color: rgb(166, 231, 146);
+  color: #6079ff;
+}
+.categories .detail {
+  display: table-cell;
+  padding: 0 20px 20px 20px;
+}
+.categories .detail h2 {
+  border-bottom: 1px solid #555;
+}
+.categories .detail table {
+  border: none;
+  width: 100%;
+}
+.categories .detail table thead {
+  background-color: #555;
+  color: white;
+}
+.categories .detail table thead th {
+  text-align: left;
+  font-size: 14px;
+  padding: 7px;
+}
+.categories .detail table td {
+  font-size: 14px;
+  padding: 5px 7px;
+}
+.categories .detail table .even {
+  background-color: rgb(56, 207, 187);
+}
+.categories .detail table .odd {
+  background-color: rgb(169, 225, 230);
+}
+
+#nav_bar ul li a.active-page {
+  background-color: rgb(161, 161, 230);
+}
+
+#nav_bar ul li a:hover {
+  background-color: rgb(166, 231, 146);
+  color: red;
+}
