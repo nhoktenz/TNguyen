@@ -64,7 +64,7 @@ h1 {
   vertical-align: top;
   min-width: 220px;
   width: 1px;
-  background-color: #c2b1a2;
+  background-color: rgba(194, 177, 162, 0.8);
   /* border: 1px solid#7F5025; */
   border-top: none;
   border-bottom: none;
@@ -74,15 +74,17 @@ h1 {
 }
 .categories .menu ul li {
   padding: 10px;
-  border-bottom: 1px solid #7f5025;
+  border-bottom: 1px solid #ffffff;
   cursor: pointer;
-  color: black;
+  color: rgb(0, 0, 0);
+  text-shadow: rgb(252, 252, 252);
   font-size: 14px;
+  font-weight: 550;
 }
 .categories .menu ul li:hover {
   background-color: rgb(166, 231, 146);
   color: #6079ff;
-  font-weight: bold;
+  font-weight: bolder;
 }
 .categories .detail {
   display: table-cell;
