@@ -41,19 +41,21 @@
     <span class="separator">&gt;</span>
     <span class="actual">Categories</span>
   </div>
-  <div class="categories text-center">
-    <div class="menu">
-      <ul>
-        <li
-          ng-repeat="category in cat.categories"
-          ui-sref="items({ categoryShortName: category.short_name })"
-        >
-          ({{category.short_name}}) {{category.name}}
-        </li>
-      </ul>
-    </div>
+  <div class="cat">
+    <div class="categories text-center w-50 mx-auto">
+      <div class="menu">
+        <ul>
+          <li
+            ng-repeat="category in cat.categories"
+            ui-sref="items({ categoryShortName: category.short_name })"
+          >
+            ({{category.short_name}}) {{category.name}}
+          </li>
+        </ul>
+      </div>
 
-    <!-- <ui-view class="detail"></ui-view> -->
+      <!-- <ui-view class="detail"></ui-view> -->
+    </div>
   </div>
 </div>
 
