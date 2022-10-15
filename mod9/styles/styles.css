@@ -10,13 +10,14 @@ body {
 }
 
 h1 {
-  background-color: rgb(161, 161, 230);
+  background-color: rgba(194, 177, 162, 0.7);
   text-align: center;
   padding: 10px 0 3px;
-  color: rgb(158, 27, 27);
+  color: rgb(11, 2, 22);
   border: 1px solid #ccc;
   border-bottom: none;
   margin-bottom: 0px;
+  text-shadow: 3px 3px #e2ced0;
 }
 
 .categories .menu {
