@@ -123,5 +123,6 @@ h1 {
 
 #nav_bar ul li a:hover {
   background-color: rgb(166, 231, 146);
-  color: red;
+  color: #6079ff;
+  font-weight: bold;
 }
