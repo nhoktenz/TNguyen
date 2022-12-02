@@ -12,5 +12,6 @@
     console.log(items);
     itm.menu_items = items.menu_items;
     itm.category = items.category;
+    console.log(itm.menu_items);
   }
 })();
