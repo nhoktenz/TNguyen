@@ -1,13 +1,13 @@
 (function () {
   "use strict";
 
-  angular.module("public").controller("SignupController", SignupController);
+  angular.module("public").controller("SignUpController", SignUpController);
 
   SignUpController.$inject = ["MenuService", "MyInfoService"];
   function SignUpController(MenuService, MyInfoService) {
     var $ctrl = this;
     $ctrl.info = {};
-
+    console.log(MenuService);
     $ctrl.submit = function () {
       MenuService.getMenuItem($ctrl.info.favorite)
         .then(function (response) {
@@ -21,12 +21,17 @@
     };
 
     $ctrl.validateFavorite = function () {
-      console.log($ctrl.info.favorite);
       MenuService.getMenuItem($ctrl.info.favorite)
-        .then(function () {
-          $ctrl.invalidFavorite = false;
+        .then(function (response) {
+          console.log(response);
+          if (response !== null) {
+            $ctrl.invalidFavorite = false;
+          } else {
+            $ctrl.invalidFavorite = true;
+          }
         })
-        .catch(function () {
+        .catch(function (error) {
+          console.log(error);
           $ctrl.invalidFavorite = true;
         });
     };
