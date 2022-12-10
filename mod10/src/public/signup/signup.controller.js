@@ -11,12 +11,14 @@
     $ctrl.submit = function () {
       MenuService.getMenuItem($ctrl.info.favorite)
         .then(function (response) {
+          console.log(response);
           $ctrl.invalidFavorite = false;
           $ctrl.submitted = true;
           MyInfoService.setInfo($ctrl.info);
         })
         .catch(function () {
           $ctrl.invalidFavorite = true;
+          $ctrl.submitted = false;
         });
     };
 
