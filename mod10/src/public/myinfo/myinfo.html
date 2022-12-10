@@ -10,10 +10,39 @@
       Last name: {{myInfoCtrl.info.lastName}} <br />
       Email address: {{myInfoCtrl.info.email}} <br />
       Phone number: {{myInfoCtrl.info.phone}} <br />
+      My favorite dish: {{myInfoCtrl.info.menuFav.name}} <br />
+      <br />
     </div>
+
     <div>
       <h2 class="text-center">My Favorite</h2>
-      <menu-item menu-item="myInfoCtrl.menuItem"> </menu-item>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="menu-item-photo-info">
+            <div>{{myInfoCtrl.info.menuFav.short_name}}</div>
+            <img
+              class="img-responsive"
+              width="250"
+              height="150"
+              ng-src="images/menu/{{myInfoCtrl.menuItem.category_short_name}}/{{myInfoCtrl.menuItem.short_name}}.jpg"
+              alt="{{myInfoCtrl.menuItem.name}}"
+            />
+          </div>
+          <div class="menu-item-price">
+            {{myInfoCtrl.info.menuFav.price_small | currency}}<span>
+              {{myInfoCtrl.info.menuFav.small_portion_name}}</span
+            >
+            {{myInfoCtrl.info.menuFav.price_large | currency}}
+            <span>{{myInfoCtrl.info.menuFav.large_portion_name}}</span>
+          </div>
+        </div>
+        <div class="menu-item-description col-sm-9">
+          <h3 class="menu-item-title">{{myInfoCtrl.info.menuFav.name}}</h3>
+          <p class="menu-item-details">
+            {{myInfoCtrl.info.menuFav.description}}
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

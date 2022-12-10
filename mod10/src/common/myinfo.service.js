@@ -9,9 +9,11 @@
 
     service.setInfo = function (info) {
       service.info = info;
+      console.log(info);
     };
 
     service.getInfo = function () {
+      console.log(service.info);
       return service.info;
     };
   }

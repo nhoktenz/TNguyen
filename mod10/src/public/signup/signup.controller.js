@@ -14,6 +14,9 @@
           console.log(response);
           $ctrl.invalidFavorite = false;
           $ctrl.submitted = true;
+          console.log($ctrl.info);
+          $ctrl.info.menuFav = response;
+          console.log($ctrl.info.menuFav);
           MyInfoService.setInfo($ctrl.info);
         })
         .catch(function () {
