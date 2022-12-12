@@ -1,4 +1,4 @@
-describe("menuservices", function () {
+describe("menuservice", function () {
   var menuitems;
   var $httpBackend;
   var ApiBasePath;
@@ -9,26 +9,34 @@ describe("menuservices", function () {
     inject(function ($injector) {
       menuitems = $injector.get("MenuService");
       $httpBackend = $injector.get("$httpBackend");
-      ApiBasePath = $injector.get("ApiBasePath");
+      ApiBasePath = $injector.get("ApiPath");
     });
   });
 
-  it("should return categories list", function (shortName) {
-    var myArray = shortName.split(/([0-9]+)/);
-    var category_short_name = myArray[0];
-    var category_num = parseInt(myArray[1]) - 1;
+  console.log(menuitems);
+  console.log($httpBackend);
+  console.log(ApiBasePath);
+
+  it("should return menu item", function () {
+    console.log(ApiBasePath);
     $httpBackend
-      .whenGET(
-        ApiBasePath +
-          "/menu_items/" +
-          category_short_name +
-          "/menu_items/" +
-          category_num +
-          ".json"
-      )
-      .respond(["Lunch", "Dessert"]);
-    menuitems.getMenuItem().then(function (response) {
-      expect(response.data.short_name).toEqual(["L1"]);
+      .whenGET(ApiBasePath + "/menu_items/L/menu_items/0.json")
+      .respond({
+        description:
+          "chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request: for pint $1 extra, for large $2 extra",
+        name: "Orange Chicken",
+        price_large: 9.75,
+        short_name: "L1",
+      });
+    var item = "L1";
+    menuitems.getMenuItem(item).then(function (response) {
+      expect(response.data).toEqual({
+        description:
+          "chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request: for pint $1 extra, for large $2 extra",
+        name: "Orange Chicken",
+        price_large: 9.75,
+        short_name: "L1",
+      });
     });
     $httpBackend.flush();
   });
