@@ -2,8 +2,8 @@ describe("menuservice", function () {
   var menuitems;
   var $httpBackend;
   var ApiBasePath;
-  var item = "L1"; // favorite item exists
-  var erroritem = "L0"; // favorite item does not exist
+  var item = "L1";
+  var erroritem = "L0";
 
   beforeEach(function () {
     module("common");
@@ -16,7 +16,6 @@ describe("menuservice", function () {
   });
 
   it("should return favorite item exists", function () {
-    console.log(ApiBasePath);
     $httpBackend
       .whenGET(ApiBasePath + "/menu_items/L/menu_items/0.json")
       .respond({
@@ -39,14 +38,13 @@ describe("menuservice", function () {
     $httpBackend.flush();
   });
 
-  it("should return menu item does not exists", function () {
-    console.log(ApiBasePath);
+  it("should return favorite item does not exist", function () {
     $httpBackend
       .whenGET(ApiBasePath + "/menu_items/L/menu_items/-1.json")
-      .respond(null);
+      .respond("null");
 
-    menuitems.getMenuItem(item).then(function (response) {
-      expect(response.data).toEqual(null);
+    menuitems.getMenuItem(erroritem).then(function (response) {
+      expect(response.data).toEqual("null");
     });
     $httpBackend.flush();
   });

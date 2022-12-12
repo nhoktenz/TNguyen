@@ -25,9 +25,9 @@
       var myArray = shortName.split(/([0-9]+)/);
       var category_short_name = myArray[0];
       var category_num = parseInt(myArray[1]) - 1;
-      console.log(myArray);
-      console.log(category_short_name);
-      console.log(category_num);
+      // console.log(myArray);
+      // console.log(category_short_name);
+      // console.log(category_num);
       var url =
         ApiPath +
         "/menu_items/" +
