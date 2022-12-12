@@ -2,8 +2,12 @@
   <h2 class="text-center">My Info</h2>
 
   <div ng-if="!myInfoCtrl.info">
-    Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+    Not Signed Up Yet.
+    <a ui-sref="public.signup" class="btn btn-warning"
+      >Sign up Now! <i class="bi bi-box-arrow-in-right"></i
+    ></a>
   </div>
+
   <div ng-if="myInfoCtrl.info">
     <div>
       <b>First name:</b> {{myInfoCtrl.info.firstName}} <br />
