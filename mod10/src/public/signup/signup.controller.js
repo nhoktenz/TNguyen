@@ -7,16 +7,16 @@
   function SignUpController(MenuService, MyInfoService) {
     var $ctrl = this;
     $ctrl.info = {};
-    console.log(MenuService);
+    //console.log(MenuService);
     $ctrl.submit = function () {
       MenuService.getMenuItem($ctrl.info.favorite)
         .then(function (response) {
-          console.log(response);
+          //console.log(response);
           $ctrl.invalidFavorite = false;
           $ctrl.submitted = true;
-          console.log($ctrl.info);
+          //console.log($ctrl.info);
           $ctrl.info.menuFav = response;
-          console.log($ctrl.info.menuFav);
+          //console.log($ctrl.info.menuFav);
           MyInfoService.setInfo($ctrl.info);
         })
         .catch(function () {
