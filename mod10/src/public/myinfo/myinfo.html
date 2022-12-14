@@ -1,26 +1,36 @@
 <div class="container">
-  <h2 class="text-center">My Info</h2>
-
   <div ng-if="!myInfoCtrl.info">
-    Not Signed Up Yet.
+    <i class="bi bi-emoji-frown"></i> Not Signed Up Yet.
     <a ui-sref="public.signup" class="btn btn-warning"
-      >Sign up Now! <i class="bi bi-box-arrow-in-right"></i
+      ><b class="text-primary"
+        >Sign up Now! <i class="bi bi-box-arrow-in-right"></i></b
     ></a>
   </div>
 
   <div ng-if="myInfoCtrl.info">
     <div>
-      <b>First name:</b> {{myInfoCtrl.info.firstName}} <br />
-      <b>Last name:</b> {{myInfoCtrl.info.lastName}} <br />
-      <b>Email address:</b> {{myInfoCtrl.info.email}} <br />
-      <b>Phone number:</b> {{myInfoCtrl.info.phone}} <br />
-      <b>My favorite dish:</b> {{myInfoCtrl.info.menuFav.name}} <br />
-      <b>My favorite dish short name:</b> {{myInfoCtrl.info.menuFav.short_name}}
-      <br />
+      <h2 class="text-center">My Info <i class="bi bi-person-badge"></i></h2>
+      <div>
+        <b><i class="bi bi-emoji-smile"></i> First name:</b>
+        {{myInfoCtrl.info.firstName}} <br />
+        <b><i class="bi bi-emoji-smile"></i> Last name:</b>
+        {{myInfoCtrl.info.lastName}} <br />
+        <b><i class="bi bi-envelope-heart"></i> Email address:</b>
+        {{myInfoCtrl.info.email}} <br />
+        <b><i class="bi bi-telephone"></i> Phone number:</b>
+        {{myInfoCtrl.info.phone}} <br />
+        <b><i class="bi bi-heart-fill"></i> My favorite dish:</b>
+        {{myInfoCtrl.info.menuFav.name}} <br />
+        <b><i class="bi bi-suit-heart"></i> My favorite dish short name:</b>
+        {{myInfoCtrl.info.menuFav.short_name}}
+        <br />
+      </div>
     </div>
 
     <div>
-      <h2 class="text-center">My Favorite</h2>
+      <h2 class="text-center">
+        My Favorite <i class="bi bi-postcard-heart"></i>
+      </h2>
       <div class="row">
         <div class="col-sm-3">
           <div class="menu-item-photo-info">

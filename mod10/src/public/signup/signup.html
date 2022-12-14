@@ -102,8 +102,10 @@
   </form>
 
   <br />
-  <div ng-if="signUpCtrl.submitted" class="text-success text-center">
+  <div ng-if="signUpCtrl.submitted" class="text-white text-center">
     <b>Your information has been saved! </b>
-    <a ui-sref="public.myinfo">Click here to see it!</a>
+    <a ui-sref="public.myinfo" class="text-secondary"
+      ><i class="bi bi-mouse2"></i> Click here to see it!</a
+    >
   </div>
 </div>
